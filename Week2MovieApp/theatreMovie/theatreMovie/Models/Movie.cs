@@ -7,6 +7,14 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace theatreMovie.Models
 {
+
+    public enum Language
+    {
+        English,
+        Japanese,
+        Chinese
+    }
+
     public class Movie
     {
         public int Id {get; set; }
@@ -20,14 +28,8 @@ namespace theatreMovie.Models
         [EmailAddress]
         public string Email { get; set; }
 
-        public enum MovieLanguage
-        {
-            English,
-            Japanese,
-            Chinese
-        }
-
-        public List<Catagory> MovieCatagories { get; set; }
+        public Language Language { get; set; }
+        
 
 
 

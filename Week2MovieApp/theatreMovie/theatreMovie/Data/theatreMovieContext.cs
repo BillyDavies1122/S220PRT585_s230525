@@ -15,7 +15,6 @@ namespace theatreMovie.Models
         }
 
         public DbSet<theatreMovie.Models.Movie> Movie { get; set; }
-
         public DbSet<theatreMovie.Models.Catagory> Catagory { get; set; }
     }
 }

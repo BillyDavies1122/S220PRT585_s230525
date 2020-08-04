@@ -11,5 +11,7 @@ namespace theatreMovie.Models
         public string Name { get; set; }
         public string Code { get; set; }
 
+        public ICollection<Catagory> Catagories { get; set; }
+
     }
 }
