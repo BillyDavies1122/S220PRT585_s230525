@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace theatreMovie.Models
 {
@@ -21,8 +22,8 @@ namespace theatreMovie.Models
 
         public string Language { get; set; }
 
-        public ICollection<Catagory> Catagory { get; set; }
-
+        [ForeignKey("Id")]
+        public int CategoryId { get; set; }
 
 
 
