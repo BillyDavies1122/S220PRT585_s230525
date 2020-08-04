@@ -29,6 +29,9 @@ namespace theatreMovie.Models
         public string Email { get; set; }
 
         public Language Language { get; set; }
+
+
+        public Catagory Catagory { get; set; }
         
 
 
