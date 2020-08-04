@@ -1,12 +1,12 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using System.Text.Encodings.Web;
-
+/*
 namespace theatreMovie.Controllers
 {
     public class Movies : Controller
     {
         // 
-        // GET: /Movies/
+        // GET: /testing/
 
         public IActionResult Index()
         {
@@ -21,4 +21,4 @@ namespace theatreMovie.Controllers
             return "This is the Welcome action method...";
         }
     }
-}
+}*/

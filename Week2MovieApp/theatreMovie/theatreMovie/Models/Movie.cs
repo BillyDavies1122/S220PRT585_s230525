@@ -21,6 +21,8 @@ namespace theatreMovie.Models
 
         public string Language { get; set; }
 
+        public ICollection<Catagory> Catagory { get; set; }
+
 
 
 
