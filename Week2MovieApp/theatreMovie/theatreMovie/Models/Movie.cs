@@ -20,11 +20,14 @@ namespace theatreMovie.Models
         [EmailAddress]
         public string Email { get; set; }
 
-        public string Language { get; set; }
+        public enum MovieLanguage
+        {
+            English,
+            Japanese,
+            Chinese
+        }
 
-
-        [ForeignKey("Id")]
-        public int CategoryId { get; set; }
+        public List<Catagory> MovieCatagories { get; set; }
 
 
 

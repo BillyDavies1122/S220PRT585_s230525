@@ -10,7 +10,7 @@ using theatreMovie.Models;
 namespace theatreMovie.Migrations
 {
     [DbContext(typeof(theatreMovieContext))]
-    [Migration("20200804123916_initial")]
+    [Migration("20200804125942_initial")]
     partial class initial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -29,9 +29,13 @@ namespace theatreMovie.Migrations
 
                     b.Property<string>("Code");
 
+                    b.Property<int?>("MovieId");
+
                     b.Property<string>("Name");
 
                     b.HasKey("Id");
+
+                    b.HasIndex("MovieId");
 
                     b.ToTable("Catagory");
                 });
@@ -42,13 +46,9 @@ namespace theatreMovie.Migrations
                         .ValueGeneratedOnAdd()
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<int>("CategoryId");
-
                     b.Property<string>("Director");
 
                     b.Property<string>("Email");
-
-                    b.Property<string>("Language");
 
                     b.Property<DateTime>("ReleaseDate");
 
@@ -57,6 +57,13 @@ namespace theatreMovie.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Movie");
+                });
+
+            modelBuilder.Entity("theatreMovie.Models.Catagory", b =>
+                {
+                    b.HasOne("theatreMovie.Models.Movie")
+                        .WithMany("MovieCatagories")
+                        .HasForeignKey("MovieId");
                 });
 #pragma warning restore 612, 618
         }
