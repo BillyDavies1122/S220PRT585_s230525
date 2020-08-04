@@ -22,6 +22,7 @@ namespace theatreMovie.Models
 
         public string Language { get; set; }
 
+
         [ForeignKey("Id")]
         public int CategoryId { get; set; }
 
